@@ -1,0 +1,84 @@
+body {
+
+        background-color: #085574;
+        display: flex;
+        flex-direction: column; /* Para que los participantes estén encima de la calculadora */
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Usar min-height para asegurar que al menos ocupe toda la ventana */
+        margin: 0;
+        color: white; /* Color de texto para la sección de participantes */
+        font-family: sans-serif; /* Fuente básica para la sección de participantes */
+        position: relative; /* Establecer como contenedor relativo para posicionar la imagen */
+        background-image: url('1.jgp'); /* Añade la ruta de tu imagen aquí */
+        background-size: cover; /* Para que la imagen cubra todo el fondo */
+        background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+    }
+    
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    margin-bottom: 20px;
+}
+
+.celda {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.celda:nth-child(1),
+.celda:nth-child(2),
+.celda:nth-child(3) {
+    border-top: none;
+}
+
+.celda:nth-child(1),
+.celda:nth-child(4),
+.celda:nth-child(7) {
+    border-left: none;
+}
+
+.celda:nth-child(3),
+.celda:nth-child(6),
+.celda:nth-child(9) {
+    border-right: none;
+}
+
+.celda:nth-child(7),
+.celda:nth-child(8),
+.celda:nth-child(9) {
+    border-bottom: none;
+}
+
+#mensaje {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#reiniciar {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#reiniciar:hover {
+    background-color: #45a049;
+}
